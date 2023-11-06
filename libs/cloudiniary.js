@@ -9,9 +9,9 @@ async function cloudinaryConnect () {
     if(!isConnected){
       console.log('connecting cloudinary');
        v2.config({ 
-        cloud_name: 'dxsxymimb', 
-        api_key: '714768195618313', 
-        api_secret: 'vljMxTE4j6hmSkDFYouuuAIbXPQ' 
+        cloud_name: process.env.CLOUD_NAME, 
+        api_key: process.env.CLOUDINARY_KEY, 
+        api_secret: process.env.CLOUDINARY_SECRET 
       });
       isConnected = true
       resolve('Connected')
