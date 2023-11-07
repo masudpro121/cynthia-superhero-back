@@ -1,6 +1,6 @@
 const express = require('express')
 const generateImageRoute = express.Router()
-
+const axios = require('axios')
 generateImageRoute.post("/", async(req, res)=>{
   const response = await axios.post(
     "https://api.thenextleg.io/v2/imagine",
